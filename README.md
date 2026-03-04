@@ -22,8 +22,8 @@ $$M_{aportes} = PMT \cdot \frac{(1 + i)^n - 1}{i}$$
 ## 🛠️ Tecnologias Utilizadas
 
 Como parte dos meus estudos em **Engenharia de Software** e **Desenvolvimento Web**, utilizei:
-
+Desenvolvido com auxílio de IA para estruturação e refinado manualmente para otimização de lógica e UX".
 * **HTML5:** Estrutura semântica da aplicação.
 * **CSS3:** Design responsivo e interface amigável.
 * **JavaScript (ES6+):** Lógica matemática e manipulação do DOM.
-Desenvolvido com auxílio de IA para estruturação e refinado manualmente para otimização de lógica e UX".
+
