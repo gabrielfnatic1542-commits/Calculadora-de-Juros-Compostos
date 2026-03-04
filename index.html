@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de juros compostos com ajuste de inflação. Conheça o montante real do seu investimento.">
+    <meta name="theme-color" content="#1a1a1a">
+    <meta property="og:title" content="Calculadora de Juros Compostos">
+    <meta property="og:description" content="Use nossa ferramenta para calcular montantes e ajustar pela inflação.">
+    <title>Calculadora de Juros Compostos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="brand">💼 Juros Compostos</a>
+            <a href="about.html">Sobre</a>
+            <a href="contact.html">Contato</a>
+            <span id="dateTime" class="date-time"></span>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>💰 Juros Compostos</h1>
+        <p class="subtitle">Calcule seu investimento com facilidade</p>
+
+        <div class="form-group">
+            <label for="capital">Capital Inicial (R$)</label>
+            <input type="number" id="capital" placeholder="Ex: 1000" min="0" step="0.01">
+        </div>
+
+        <div class="form-group">
+            <label for="taxa">Taxa de Juros Anual (%)</label>
+            <input type="number" id="taxa" placeholder="Ex: 5" min="0" step="0.01">
+        </div>
+
+        <div class="form-group">
+            <label for="tempo">Tempo (anos)</label>
+            <input type="number" id="tempo" placeholder="Ex: 10" min="0" step="0.1">
+        </div>
+
+        <div class="form-group">
+            <label for="periodo">Períodos de Capitalização por Ano</label>
+            <input type="number" id="periodo" placeholder="Ex: 12 (mensal)" min="1" step="1" value="12">
+        </div>
+
+        <div class="form-group">
+            <label for="aporteMensal">Aporte Mensal (R$)</label>
+            <input type="number" id="aporteMensal" placeholder="Ex: 100" min="0" step="0.01" value="0">
+        </div>
+
+        <div class="button-group">
+            <button id="calcularBtn">Calcular</button>
+            <button id="limparBtn">Limpar</button>
+        </div>
+
+        <div class="error" id="error"></div>
+
+        <div class="result-box" id="resultBox">
+            <h2>📊 Resultado do Cálculo</h2>
+            <div class="result-item">
+                <label>Capital Inicial:</label>
+                <div class="value" id="capitalResult">R$ 0,00</div>
+            </div>
+            <div class="result-item">
+                <label>Taxa Anual:</label>
+                <div class="value" id="taxaResult">0%</div>
+            </div>
+            <div class="result-item">
+                <label>Período:</label>
+                <div class="value" id="periodoResult">0 anos</div>
+            </div>
+            <div class="result-item">
+                <label>Montante Final:</label>
+                <div class="value" id="montanteResult" style="font-size: 1.3em; color: #ffed4e;">R$ 0,00</div>
+            </div>
+            <div class="result-item">
+                <label>Juros Ganhos:</label>
+                <div class="value" id="jurosResult" style="color: #90EE90;">R$ 0,00</div>
+            </div>
+        </div>
+
+        <div class="inflation-box" id="inflationBox">
+            <h2>📉 Ajuste pela Inflação</h2>
+            <div class="result-item">
+                <label>Inflação Anual (IPCA):</label>
+                <div class="value" id="infResult">0%</div>
+            </div>
+            <div class="result-item">
+                <label>Montante Real:</label>
+                <div class="value" id="montanteRealResult" style="font-size: 1.3em; color: #90EE90;">R$ 0,00</div>
+            </div>
+            <p class="info-note"><em>*A API do Banco Central só responde quando a página estiver servida via HTTP/HTTPS (não funciona via file://).</em></p>
+        </div>
+
+        <div class="info-box">
+            <strong>ℹ️ Como funciona:</strong><br>
+            A fórmula usada é: <strong>M = C × (1 + i/n)^(n×t) + PMT × [((1 + i/n)^(n×t) - 1) / (i/n)]</strong><br>
+            Onde: M = Montante, C = Capital, i = Taxa, n = Períodos, t = Tempo, PMT = Aporte Periódico<br>
+            <em>Os resultados são estimativas e não constituem consultoria financeira.</em>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Calculadora de Juros Compostos
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

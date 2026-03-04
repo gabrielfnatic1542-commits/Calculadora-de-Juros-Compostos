@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de contato da calculadora de juros compostos">
+    <title>Contato - Juros Compostos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="brand">💼 Juros Compostos</a>
+            <a href="about.html">Sobre</a>
+            <a href="contact.html">Contato</a>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Fale conosco</h1>
+        <p>Tem alguma dúvida, sugestão ou encontrou um bug? Envie a mensagem abaixo e responderemos assim que possível.</p>
+        <form class="contact-form" onsubmit="alert('Mensagem enviada!'); return false;">
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu e-mail" required>
+            <textarea rows="5" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        &copy; 2026 Calculadora de Juros Compostos
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
