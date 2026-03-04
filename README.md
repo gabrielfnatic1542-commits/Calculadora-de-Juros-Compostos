@@ -26,3 +26,4 @@ Como parte dos meus estudos em **Engenharia de Software** e **Desenvolvimento We
 * **HTML5:** Estrutura semântica da aplicação.
 * **CSS3:** Design responsivo e interface amigável.
 * **JavaScript (ES6+):** Lógica matemática e manipulação do DOM.
+Desenvolvido com auxílio de IA para estruturação e refinado manualmente para otimização de lógica e UX".
